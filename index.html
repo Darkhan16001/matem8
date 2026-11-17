@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1">
+
+  <title>§7 Иррационал өрнектер | MATH LAB</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    window.MathJax = {
+      tex:{
+        inlineMath:[["\\(","\\)"]],
+        displayMath:[["\\[","\\]"]]
+      },
+      svg:{fontCache:"global"},
+      startup:{typeset:false}
+    };
+  </script>
+
+  <script defer
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+<div class="app">
+
+  <header class="header">
+    <div class="brand">
+      <div class="logo">√</div>
+      <div>
+        <strong>MATH LAB PRO</strong>
+        <small>§7. Иррационал өрнектерді түрлендіру</small>
+      </div>
+    </div>
+
+    <div class="header-info">
+      <span class="chip">1 КУРС</span>
+      <span class="chip">80 МИНУТ</span>
+      <span class="chip">
+        ⭐ <b id="totalScore">0</b> ұпай
+      </span>
+      <button id="fullscreenBtn" title="Толық экран">
+        ⛶
+      </button>
+    </div>
+  </header>
+
+  <div class="progress">
+    <div id="pageProgress"></div>
+  </div>
+
+  <div class="workspace">
+
+    <!-- БАСҚАРУ ТЕК СОЛ ЖАҚТА -->
+    <aside class="sidebar">
+      <div class="sidebar-title">САБАҚ БӨЛІМДЕРІ</div>
+
+      <button data-section="intro">🏠 Кіріспе</button>
+      <button data-section="theory">📖 Түсіндірме</button>
+      <button data-section="notes">📝 Конспект</button>
+      <button data-section="level">📐 4 деңгей</button>
+      <button data-section="game">🏆 Топтық ойын</button>
+      <button data-section="homework">📚 Үй жұмысы</button>
+      <button data-section="finish">✅ Қорытынды</button>
+
+      <div class="separator"></div>
+      <div class="sidebar-title">КАЛЬКУЛЯТОРЛАР</div>
+
+      <button id="basicLaunch" class="calc-open">
+        🧮 Қарапайым
+      </button>
+      <button id="scienceLaunch" class="calc-open">
+        ∑ Ғылыми
+      </button>
+
+      <div class="separator"></div>
+      <button id="resetGame">↻ Ойынды жаңарту</button>
+      <button id="prevPage">← Артқа</button>
+      <button id="nextPage" class="next">Келесі →</button>
+    </aside>
+
+    <main id="content" class="content"></main>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-main">
+
+      <div class="stat">
+        <small>🕒 Алматы уақыты</small>
+        <strong id="clock">00:00:00</strong>
+      </div>
+
+      <div class="stat">
+        <small>⏳ Қалған уақыт</small>
+        <strong id="remaining">80:00</strong>
+      </div>
+
+      <div class="stat">
+        <small>⏱ Өткен уақыт</small>
+        <strong id="elapsed">00:00</strong>
+      </div>
+
+      <div class="timer-actions">
+        <button id="timerStart">▶ Бастау</button>
+        <button id="timerPause">Ⅱ Үзіліс</button>
+        <button id="timerReset">↻</button>
+      </div>
+
+    </div>
+
+    <div class="progress">
+      <div id="timeProgress"></div>
+    </div>
+
+    <div class="footer-bottom">
+      <strong>BY DARKHAN</strong>
+      <span id="pageCounter">1 / 1</span>
+      <span id="pageTitle">Кіріспе</span>
+    </div>
+  </footer>
+
+</div>
+
+<!-- ҚАРАПАЙЫМ КАЛЬКУЛЯТОР -->
+<section class="calculator" id="calc-basic">
+  <div class="calc-head">
+    <strong>🧮 Қарапайым</strong>
+    <button class="close-calc" data-close="basic">✕</button>
+  </div>
+  <div class="calc-display" id="display-basic">0</div>
+  <div class="calc-keys" id="keys-basic"></div>
+</section>
+
+<!-- ҒЫЛЫМИ КАЛЬКУЛЯТОР -->
+<section class="calculator" id="calc-science">
+  <div class="calc-head">
+    <strong>∑ Ғылыми • DEG</strong>
+    <button class="close-calc" data-close="science">✕</button>
+  </div>
+  <div class="calc-display" id="display-science">0</div>
+  <div class="calc-keys" id="keys-science"></div>
+</section>
+
+</body>
+</html>
